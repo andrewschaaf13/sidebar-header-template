@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
+import Test from './Components/Test';
 
+const useStyles = makeStyles({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
+    width: '100vw',
+  },
+  content: {
+    display: 'flex',
+    flex: '1 1 auto',
+    flexDirection: 'row',
+    overflowY: 'hidden',
+  },
+});
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <Header />
+      <div className={classes.content}>
+        <Sidebar />
+        <Test />
+      </div>
     </div>
   );
 }
