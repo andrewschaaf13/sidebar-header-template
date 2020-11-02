@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# React Template for sticky sidebar and header
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a (hopefully) useful template for someone wanting a template with a pre-made sidebar and header that does not scroll with content.
+
+Template also includes Material UI.
 
 ## Available Scripts
 
